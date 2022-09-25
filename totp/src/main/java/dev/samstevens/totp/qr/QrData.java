@@ -80,7 +80,7 @@ public class QrData {
         }
 
         try {
-            return URLEncoder.encode(text, StandardCharsets.UTF_8.toString()).replaceAll("\\+", "%20");
+            return URLEncoder.encode(text, StandardCharsets.UTF_8.name()).replaceAll("\\+", "%20");
         } catch (UnsupportedEncodingException e) {
             // This should never throw, as we are certain the charset specified (UTF-8) is valid
             throw new RuntimeException("Could not URI encode QrData.");
